@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+import Topo from './components/Topo';
+import Banner from './components/Banner';
+import Experiencia from './components/Experiencia';
+import Rodape from './components/Rodape';
+
 function App() {
+  let dark = 'dark-theme';
+  let light = 'light-theme';
+
+  let sun = 'assets/sun.png';
+  let moon = 'assets/moon.png';
+
+  const[astroImg, setAstroImg] = useState(true);
+
+  const[darkMode, setDarkMode] = useState(true);
+
+  function trocaMode(){
+    setDarkMode(!darkMode);
+    setAstroImg(!astroImg);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App" id={darkMode ? light : dark}>
+      
+      <Topo
+      button={trocaMode}
+      astro={astroImg ? moon : sun}/>
+      <Banner />
+      <Experiencia tema={darkMode}/>
+      <Rodape />
+    </div>      
   );
 }
 

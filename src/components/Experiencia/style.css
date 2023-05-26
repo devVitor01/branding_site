@@ -1,0 +1,48 @@
+.experiencias-container{
+    width: 100%;
+    padding: 70px 0;
+    margin-bottom: 0;
+}
+
+.experiencias-box{
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.experiencias-box h1{
+    font-size: 45px;
+}
+
+.experiencias-box p{
+    max-width: 860px;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+.linha{
+    width: 120px;
+    height: 1px;
+    border-bottom: 7px solid #febc33;
+    margin: 30px auto;
+}
+
+.card-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#light-card-item{    
+    background-color: #f6f8fc;
+}
+
+#dark-card-item{
+    background-color: inherit;
+    color: #ccc;
+}
+
+#dark-card-item h2{
+    color: #fff;
+}
+
